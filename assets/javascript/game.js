@@ -2,9 +2,9 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 
 var wins = 0;
 var losses = 0;
-var guessesLeft = 5;
+var guesses = 5;
 var lettersGuessed = [];
-var computerGuess = [];
+
 
 var winsText = document.getElementById("1");
 var lossesText = document.getElementById("2");
@@ -37,6 +37,6 @@ if (guesses === 0) {
 }
 }
 winsText.textContent = wins;
-losesText.textContent = losses;
+lossesText.textContent = losses;
 guessesLeft.textContent = guesses;
 guessesText.textContent = lettersGuessed;
