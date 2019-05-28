@@ -6,10 +6,10 @@ var guessesLeft = 5;
 var lettersGuessed = [];
 var computerGuess = [];
 
-var winsText = document.getElementById("");
-var lossesText = document.getElementById("");
-var guessesLeft = document.getElementById("");
-var guessesText = document.getElementById("");
+var winsText = document.getElementById("1");
+var lossesText = document.getElementById("2");
+var guessesLeft = document.getElementById("3");
+var guessesText = document.getElementById("4");
 
 
 
@@ -19,24 +19,24 @@ document.onkeyup = function (event) {
 
 	if (userGuess === computerGuess) {
 		wins++;
-		guessedLetters = [];
+		lettersGuessed = [];
 		guesses = 10;
 	}
 
 else {
 	guesses--;
-	guessedLetters.push(userGuess);
+	lettersGuessed.push(userGuess);
 }
 
 if (guesses === 0) {
 	losses++;
-	guessedLetters = [];
+	lettersGuessed = [];
 }
 if (guesses === 0) {
 	guesses = 10;
 }
 }
-winsText.textContent = "Wins: " + wins;
-losesText.textContent = "Losses: " + losses;
-guessesLeft.textContent = "Guesses Left: " + guesses;
-guessesText.textContent = "Your Guesses so far: " + guessedLetters;
+winsText.textContent = wins;
+losesText.textContent = losses;
+guessesLeft.textContent = guesses;
+guessesText.textContent = lettersGuessed;
